@@ -1,0 +1,534 @@
+t group9  cap:k
+-event12  DEVICE_ADDED                 PS/2 Generic Mouse                seat0 default group10 cap:p left scroll-nat scroll-button
+-event2   KEYBOARD_KEY                 +0.000s	KEY_LEFT (105) pressed
+ event2   KEYBOARD_KEY                 +0.194s	KEY_LEFT (105) released
+ event2   KEYBOARD_KEY                 +2.267s	KEY_RIGHT (106) pressed
+ event2   KEYBOARD_KEY                 +2.435s	KEY_RIGHT (106) released this key is also not working i don't know why 
+
+
+
+
+
+
+# hyprctl binds | wl-copy
+ bind
+	modmask: 64
+	submap: 
+	key: Q
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: kitty
+
+bind
+	modmask: 65
+	submap: 
+	key: X
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: killactive
+	arg: 
+
+bind
+	modmask: 64
+	submap: 
+	key: L
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: swaylock-effects
+
+bind
+	modmask: 64
+	submap: 
+	key: M
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: wlogout --protocol layer-shell
+
+bind
+	modmask: 65
+	submap: 
+	key: M
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exit
+	arg: 
+
+bind
+	modmask: 64
+	submap: 
+	key: E
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: pcmanfm
+
+bind
+	modmask: 64
+	submap: 
+	key: V
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: togglefloating
+	arg: 
+
+bind
+	modmask: 64
+	submap: 
+	key: SPACE
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: fuzzel
+
+bind
+	modmask: 64
+	submap: 
+	key: P
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: pseudo
+	arg: 
+
+bind
+	modmask: 64
+	submap: 
+	key: J
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: togglesplit
+	arg: 
+
+bind
+	modmask: 64
+	submap: 
+	key: S
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: grim -g "$(slurp)" - | swappy -f -
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 113
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: pamixer -t
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 114
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: pamixer -d 5
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 115
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: pamixer -i 5
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 164
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: playerctl play-pause
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 232
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: brightnessctl set 10%-
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 233
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: brightnessctl set 10%+
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 107
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: wtype -k end
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 102
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: wtype -k home
+
+bind
+	modmask: 0
+	submap: 
+	key: 
+	keycode: 99
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: grim ~/Pictures/screenshot_$(date +%F_%T).png
+
+bind
+	modmask: 1
+	submap: 
+	key: Print
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%F_%T).png
+
+bind
+	modmask: 64
+	submap: 
+	key: left
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movefocus
+	arg: l
+
+bind
+	modmask: 64
+	submap: 
+	key: right
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movefocus
+	arg: r
+
+bind
+	modmask: 64
+	submap: 
+	key: up
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movefocus
+	arg: u
+
+bind
+	modmask: 64
+	submap: 
+	key: down
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movefocus
+	arg: d
+
+bind
+	modmask: 64
+	submap: 
+	key: 1
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 1
+
+bind
+	modmask: 64
+	submap: 
+	key: 2
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 2
+
+bind
+	modmask: 64
+	submap: 
+	key: 3
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 3
+
+bind
+	modmask: 64
+	submap: 
+	key: 4
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 4
+
+bind
+	modmask: 64
+	submap: 
+	key: 5
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 5
+
+bind
+	modmask: 64
+	submap: 
+	key: 6
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 6
+
+bind
+	modmask: 64
+	submap: 
+	key: 7
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 7
+
+bind
+	modmask: 64
+	submap: 
+	key: 8
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 8
+
+bind
+	modmask: 64
+	submap: 
+	key: 9
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 9
+
+bind
+	modmask: 64
+	submap: 
+	key: 0
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: 10
+
+bind
+	modmask: 65
+	submap: 
+	key: 1
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 1
+
+bind
+	modmask: 65
+	submap: 
+	key: 2
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 2
+
+bind
+	modmask: 65
+	submap: 
+	key: 3
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 3
+
+bind
+	modmask: 65
+	submap: 
+	key: 4
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 4
+
+bind
+	modmask: 65
+	submap: 
+	key: 5
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 5
+
+bind
+	modmask: 65
+	submap: 
+	key: 6
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 6
+
+bind
+	modmask: 65
+	submap: 
+	key: 7
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 7
+
+bind
+	modmask: 65
+	submap: 
+	key: 8
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 8
+
+bind
+	modmask: 65
+	submap: 
+	key: 9
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 9
+
+bind
+	modmask: 65
+	submap: 
+	key: 0
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: movetoworkspace
+	arg: 10
+
+bind
+	modmask: 64
+	submap: 
+	key: mouse_down
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: e+1
+
+bind
+	modmask: 64
+	submap: 
+	key: mouse_up
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: workspace
+	arg: e-1
+
+bindm
+	modmask: 64
+	submap: 
+	key: mouse:272
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: mouse
+	arg: movewindow
+
+bindm
+	modmask: 64
+	submap: 
+	key: mouse:273
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: mouse
+	arg: resizewindow
+
+bind
+	modmask: 64
+	submap: 
+	key: L
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: swaylock --effect-blur 7x5 --clock --indicator --screenshots --effect-vignette 0.5:0.5
+
+bind
+	modmask: 0
+	submap: 
+	key: Print
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: grim ~/Pictures/screenshot_$(date +%F_%T).png
+
+bind
+	modmask: 1
+	submap: 
+	key: Print
+	keycode: 0
+	catchall: false
+	description: 
+	dispatcher: exec
+	arg: grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%F_%T).png
+
+
