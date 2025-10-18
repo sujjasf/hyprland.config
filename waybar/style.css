@@ -3,7 +3,7 @@
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     min-height: 0;
 }
 
@@ -48,6 +48,7 @@ tooltip {
     border-radius: 10px;
 }
 
+#custom-power_profile,
 #custom-weather,
 #window,
 #clock,
@@ -61,10 +62,10 @@ tooltip {
 #backlight {
     background: #1e1e2e;
     opacity: 0.8;
-    padding: 0px 6px;
-    margin: 2px 0px;
-    margin-top: 6px;
-    border: 4px solid #181825;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 1px solid #181825;
 }
 
 #temperature {
@@ -90,6 +91,12 @@ tooltip {
     margin-left: 10px;
     padding-right: 0px;
     padding-left: 5px;
+}
+
+#custom-power_profile {
+    color: #a6e3a1;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 #window {

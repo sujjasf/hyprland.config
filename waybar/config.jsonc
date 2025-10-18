@@ -5,10 +5,10 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 28,
-    "modules-left": ["clock","custom/weather","hyprland/workspaces"],
+    "height": 50,
+    "modules-left": ["clock","custom/weather","wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "bluetooth", "temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -31,6 +31,14 @@
         }
     },
     
+    "custom/power_profile":{
+        //shows the current power profile and switches to next on click
+        "exec": "asusctl profile -p | sed s:'Active profile is'::",
+        "interval": 30,
+        "format": "󰈐{}", 
+        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
 
    "custom/weather" : {
         //shows the current weather and forecast
@@ -42,16 +50,14 @@
     },
 
     "tray": {
-        "icon-size": 16,
-        "spacing": 6
+        "icon-size": 18,
+        "spacing": 10
     },
 
     "clock": {
-        "format": " {:%I:%M %p   %a, %b %d}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "interval": 60
+        "format": "{: %I:%M %p   %a, %b %e}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
 
     "backlight": {
         "device": "intel_backlight",
@@ -106,12 +112,12 @@
     
     "temperature": {
         "thermal-zone": 1,
-        "format": "{temperatureC}°C ",
+        "format": "{temperatureF}°F ",
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C "
     },
 
-"network": {
+    "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr}",
