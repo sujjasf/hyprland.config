@@ -60,8 +60,7 @@ cp -r /path/to/my/hyprland ./hyprland
 ./install.sh
 ```
 ## ⚠️ Heads up! Use **End-4's `dots-hyprland`**—my laptop-only setup might summon glitches 💻💀  
-``` 
+
 Stick with the OG for a smooth, stress-free ride 🚀
-```
 
 
